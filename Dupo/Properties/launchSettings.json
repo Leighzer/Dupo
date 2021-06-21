@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Dupo": {
+      "commandName": "Project",
+      "commandLineArgs": "./Files/"
+    }
+  }
+}
