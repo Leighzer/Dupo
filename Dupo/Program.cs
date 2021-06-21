@@ -43,9 +43,12 @@ namespace Dupo
                         }
                     }
 
-                    int dupeCount = hashLookup.Where(x => x.Value.Count > 1).Count();
+                    int setsWithDupeCount = hashLookup.Where(x => x.Value.Count > 1).Count();
+                    int dupeFileCount = hashLookup.Where(x => x.Value.Count > 1).Sum(x => x.Value.Count);
 
-                    Console.WriteLine($"{dupeCount} set(s) of files with same contents found. (md5 hash of contents match)" + Environment.NewLine);
+                    Console.WriteLine($"{dupeFileCount} duplicate file(s) found.");
+                    Console.WriteLine($"{setsWithDupeCount} set(s) of files with same contents found. (md5 hash of contents match)");
+                    Console.WriteLine("");
 
                     var orderedKeyValues = hashLookup.OrderByDescending(x => x.Value.Count).ToList();
 
