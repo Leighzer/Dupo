@@ -59,7 +59,7 @@ namespace Dupo
                         {
                             Console.WriteLine(file);
                         }
-                        Console.WriteLine(Environment.NewLine);
+                        Console.WriteLine("");
                     }
                 }
                 else
