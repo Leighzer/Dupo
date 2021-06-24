@@ -123,5 +123,10 @@ namespace Dupo
                 }
             }
         }
+
+        public static bool IsEmpty(string path)
+        {
+            return !Directory.EnumerateFileSystemEntries(path).Any();
+        }
     }
 }
